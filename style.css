@@ -1,0 +1,151 @@
+/* Estilos gerais do body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 40s infinite;
+}
+
+/* Animação para alternar as imagens de fundo */
+@keyframes changeBackground {
+    0% { background-image: url('assets/aurora.jpg'); }
+    33% { background-image: url('assets/noite-azul.jpg'); }
+    66% { background-image: url('assets/noite-estrelada.jpg'); }
+    100% { background-image: url('assets/noite-vermelha.jpg'); }
+}
+
+/* Centralizando e estilizando a div.container */
+.container {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white; /* Cor do texto */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar destaque */
+}
+
+/* Estilos para o título */
+.container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilos para os botões */
+.container button {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito hover para os botões */
+.container button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para os parágrafos */
+.container p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Fundo verde para o vencedor */
+.winner {
+    background-color: #4CAF50; /* Verde */
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Fundo vermelho para o perdedor */
+.loser {
+    background-color: #f44336; /* Vermelho */
+    transition: background-color 0.5s ease;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Ajustes de estilo para o contêiner das escolhas */
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.choices h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.player-choice, .machine-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    transition: background-color 0.5s ease;
+    padding: 10px;
+    border-radius: 10px;
+    width: 45%; /* Garante que ambas ocupem o mesmo espaço */
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 15px 32px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+}
+
+#result {
+    font-size: 1.5em;
+    margin-top: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animação de efeito "shake" para as mãos */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+/* Animação de fade-in para o resultado */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Estilo aplicado ao resultado após a animação */
+.result-animated {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Estilo para as mãos durante a animação de "shake" */
+.shake-animation {
+    animation: shake 0.5s ease;
+}
+
+
+
